@@ -19,6 +19,8 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
+    border: 2.5px solid black;
     padding: 5%;
     align-items: center;
     max-width: 50%;
