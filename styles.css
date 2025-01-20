@@ -23,7 +23,7 @@ body {
     align-items: center;
     max-width: 50%;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 48px;
     color: white;
     transition: background-color 0.3s;
 }
@@ -45,14 +45,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 10vw;
     background-color: #e0e0e0;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 36px;
     text-align: center;
     border: 5px solid black;
     z-index: 1;

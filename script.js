@@ -33,11 +33,11 @@ const events = [
 let currentEvents = [];
 let clickable = true;
 
-const shuffledEvents = []
+let shuffledEvents = []
 
 function getRandomEvents() {
-    if (shuffledEvents.length() < 2) {
-        shuffledEvents = events.sort(() => 0.5 - Math.random());
+    if (shuffledEvents.length < 2) {
+        shuffledEvents = events.toSorted(() => 0.5 - Math.random());
     }
     return [shuffledEvents.pop(), shuffledEvents.pop()];
 }
@@ -63,7 +63,7 @@ function checkGuess(guess) {
         document.getElementById('event1').style.backgroundColor = '#ed3a2d';
         document.getElementById('event2').style.backgroundColor = '#ed3a2d';
     }
-    setTimeout(displayEvents, 2000);
+    setTimeout(displayEvents, 1000);
 }
 
 displayEvents();
