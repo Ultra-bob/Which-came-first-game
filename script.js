@@ -33,9 +33,13 @@ const events = [
 let currentEvents = [];
 let clickable = true;
 
+const shuffledEvents = []
+
 function getRandomEvents() {
-    const shuffled = events.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 2);
+    if (shuffledEvents.length() < 2) {
+        shuffledEvents = events.sort(() => 0.5 - Math.random());
+    }
+    return [shuffledEvents.pop(), shuffledEvents.pop()];
 }
 
 function displayEvents() {
