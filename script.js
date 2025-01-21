@@ -57,8 +57,8 @@ function checkGuess(guess) {
     const [event1, event2] = currentEvents;
     const correct = event1.date < event2.date ? 'Event 1' : 'Event 2';
     if (guess === correct) {
-        document.getElementById('event1').style.backgroundColor = '#3ac71e';
-        document.getElementById('event2').style.backgroundColor = '#3ac71e';
+        document.getElementById('event1').style.backgroundColor = '#ff0000';
+        document.getElementById('event2').style.backgroundColor = '#ff0000';
     } else {
         document.getElementById('event1').style.backgroundColor = '#ed3a2d';
         document.getElementById('event2').style.backgroundColor = '#ed3a2d';
