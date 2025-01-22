@@ -26,6 +26,7 @@ const events = [
     { name: "D-Day", date: new Date("1944-06-06") },
     { name: "Atomic Bombings", date: new Date("1945-08-06") },
     { name: "Cuban Missile Crisis", date: new Date("1962-10-16") },
+    { name: "Bilingual/Official Languages Act", date: new Date("1969-01-20") },
     { name: "Berlin Wall Falls", date: new Date("1989-11-09") },
     { name: "Canada Act", date: new Date("1982-01-01") }
 ];
@@ -57,8 +58,8 @@ function checkGuess(guess) {
     const [event1, event2] = currentEvents;
     const correct = event1.date < event2.date ? 'Event 1' : 'Event 2';
     if (guess === correct) {
-        document.getElementById('event1').style.backgroundColor = '#ff0000';
-        document.getElementById('event2').style.backgroundColor = '#ff0000';
+        document.getElementById('event1').style.backgroundColor = '#3ac71e';
+        document.getElementById('event2').style.backgroundColor = '#3ac71e';
     } else {
         document.getElementById('event1').style.backgroundColor = '#ed3a2d';
         document.getElementById('event2').style.backgroundColor = '#ed3a2d';
