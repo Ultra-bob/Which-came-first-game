@@ -28,7 +28,10 @@ const events = [
     { name: "Cuban Missile Crisis", date: new Date("1962-10-16") },
     { name: "Bilingual/Official Languages Act", date: new Date("1969-01-20") },
     { name: "Berlin Wall Falls", date: new Date("1989-11-09") },
-    { name: "Canada Act", date: new Date("1982-01-01") }
+    { name: "Canada Act", date: new Date("1982-01-01") },
+    { name: "Sputnik", date: new Date("1957-10-04") },
+    { name: "Suez Canal Crisis", date: new Date("1956-10-29") },
+    { name: "FLQ/October Crisis", date: new Date("1970-10-05") },
 ];
 
 let currentEvents = [];
@@ -38,9 +41,28 @@ let shuffledEvents = []
 
 function getRandomEvents() {
     if (shuffledEvents.length < 2) {
-        shuffledEvents = events.toSorted(() => 0.5 - Math.random());
+        shuffledEvents = events.slice().sort(() => Math.random() - 0.5);
     }
-    return [shuffledEvents.pop(), shuffledEvents.pop()];
+
+    // 90% chance to pick two events within 10 years of each other
+    let event1 = shuffledEvents.pop();
+    let event2;
+    
+    const within10Years = Math.random() < 0.9;
+
+    if (within10Years) {
+        // Find another event that is within 10 years of event1
+        event2 = shuffledEvents.find(e => Math.abs(e.date - event1.date) <= 10 * 365 * 24 * 60 * 60 * 1000); // 10 years in milliseconds
+        if (!event2) {
+            // If no event is found, just pick another random event
+            event2 = shuffledEvents.pop();
+        }
+    } else {
+        // Otherwise, just pick a completely random event
+        event2 = shuffledEvents.pop();
+    }
+
+    return [event1, event2];
 }
 
 function displayEvents() {
