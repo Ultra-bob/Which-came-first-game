@@ -1,38 +1,42 @@
 const events = [
-    { name: "Assassination of Archduke", date: new Date("1914-06-28") },
-    { name: "Austria-Hungary Declares War", date: new Date("1914-07-28") },
-    { name: "Canada Joins WWI", date: new Date("1914-08-01") },
-    { name: "Schlieffen Plan", date: new Date("1914-01-01") },
-    { name: "Trench Warfare Begins", date: new Date("1915-01-01") },
-    { name: "Second Battle of Ypres", date: new Date("1915-04-22") },
+    { name: "Schlieffen Plan", date: new Date("1905-01-01") },
+    { name: "Assassination of Archduke Franz Ferdinand", date: new Date("1914-06-28") },
+    { name: "First Battle of the Ypres", date: new Date("1914-10-19") },
     { name: "Battle of the Somme", date: new Date("1916-07-01") },
-    { name: "Battle of Vimy Ridge", date: new Date("1917-04-09") },
-    { name: "Battle of Passchendaele", date: new Date("1917-07-01") },
-    { name: "WWI Armistice", date: new Date("1918-11-11") },
-    { name: "Treaty of Versailles", date: new Date("1919-01-01") },
-    { name: "Stock Market Crash", date: new Date("1929-10-29") },
-    { name: "Rise of New Parties", date: new Date("1930-01-01") },
-    { name: "Statute of Westminster", date: new Date("1931-01-01") },
-    { name: "Hitler Rises to Power", date: new Date("1933-01-01") },
-    { name: "Munich Agreement", date: new Date("1938-01-01") },
-    { name: "Germany Invades Poland", date: new Date("1939-09-01") },
-    { name: "Dunkirk", date: new Date("1940-05-26") },
-    { name: "Pearl Harbor", date: new Date("1941-12-07") },
-    { name: "Battle of Midway", date: new Date("1942-06-04") },
-    { name: "Dieppe Raid", date: new Date("1942-08-19") },
-    { name: "Battle of Stalingrad", date: new Date("1942-08-23") },
+    { name: "Passchendaele", date: new Date("1917-07-31") },
+    { name: "Vimy Ridge", date: new Date("1917-04-09") },
+    { name: "Third Battle of the Ypres", date: new Date("1917-07-31") },
+    { name: "Armistice of WW1", date: new Date("1918-11-11") },
+    { name: "Spanish Flu", date: new Date("1918-01-01") }, // (1918-20)
+    { name: "Winnipeg General Strike", date: new Date("1919-01-01") }, // (1919)
+    { name: "Paris Peace Conference & Treaty of Versailles", date: new Date("1919-01-01") }, // (1919)
+    { name: "Prohibition", date: new Date("1920-01-17") }, // (January 17, 1920-33)
+    { name: "Black Tuesday", date: new Date("1929-10-29") },
+    { name: "Person's Case", date: new Date("1928-01-01") }, // (1928)
+    { name: "First Relief Camp Established in Canada", date: new Date("1932-01-01") }, // (1932)
+    { name: "Appeasement", date: new Date("1930-01-01") }, // (1930s)
+    { name: "Rise of New Political Parties", date: new Date("1930-01-01") }, // (1930s)
+    { name: "Hitler becomes Chancellor", date: new Date("1933-01-01") },
+    { name: "Nuremberg Laws", date: new Date("1935-01-01") },
+    { name: "S.S. St. Louis", date: new Date("1939-05-13") },
+    { name: "Hitler invades Poland", date: new Date("1939-09-01") },
+    { name: "Mobile Killing Units", date: new Date("1939-01-01") }, // (1939-41)
+    { name: "Liquidation of the Ghettos", date: new Date("1943-01-01") }, // (1943)
+    { name: "Night of the Long Knives", date: new Date("1934-06-30") },
+    { name: "Kristallnacht", date: new Date("1938-11-09") },
+    { name: "Dieppe", date: new Date("1942-08-19") },
     { name: "Italian Campaign", date: new Date("1943-07-10") },
-    { name: "Liberation of Netherlands", date: new Date("1944-09-01") },
-    { name: "D-Day", date: new Date("1944-06-06") },
-    { name: "Atomic Bombings", date: new Date("1945-08-06") },
-    { name: "Cuban Missile Crisis", date: new Date("1962-10-16") },
-    { name: "Bilingual/Official Languages Act", date: new Date("1969-01-20") },
-    { name: "Berlin Wall Falls", date: new Date("1989-11-09") },
-    { name: "Canada Act", date: new Date("1982-01-01") },
+    { name: "Hiroshima", date: new Date("1945-08-06") },
+    { name: "Nagasaki", date: new Date("1945-08-09") },
+    { name: "War comes to an end", date: new Date("1945-09-02") },
     { name: "Sputnik", date: new Date("1957-10-04") },
-    { name: "Suez Canal Crisis", date: new Date("1956-10-29") },
-    { name: "FLQ/October Crisis", date: new Date("1970-10-05") },
+    { name: "Soviet Union Technology Exposition", date: new Date("1958-01-01") }, // (1958-9)
+    { name: "Cuban Missile Crisis", date: new Date("1962-10-16") },
+    { name: "Canada becomes Bilingual", date: new Date("1969-01-01") },
+    { name: "FLQ/October Crisis", date: new Date("1970-01-01") },
+    { name: "Berlin Wall Falls", date: new Date("1989-01-01") }
 ];
+
 
 let currentEvents = [];
 let clickable = true;
@@ -66,25 +70,38 @@ function getRandomEvents() {
 }
 
 function displayEvents() {
-    currentEvents = getRandomEvents();
+    currentEvents = getRandomEvents();   
+
     document.getElementById('event1').textContent = currentEvents[0].name;
     document.getElementById('event2').textContent = currentEvents[1].name;
-    document.getElementById('event1').style.backgroundColor = '#00bcd4';
-    document.getElementById('event2').style.backgroundColor = '#f44336';
+    document.getElementById('date1').style.opacity = 0;
+    document.getElementById('date2').style.opacity = 0;
+    document.getElementById('event1container').style.backgroundColor = '#00bcd4';
+    document.getElementById('event2container').style.backgroundColor = '#f44336';
     clickable = true;
 }
 
-function checkGuess(guess) {
+function checkGuess(guess) {    
     if (!clickable) return;
     clickable = false;
     const [event1, event2] = currentEvents;
     const correct = event1.date < event2.date ? 'Event 1' : 'Event 2';
+
+    const options = {
+        year: 'numeric',
+        month: 'long',
+    };
+
+    document.getElementById('date1').style.opacity = 1
+    document.getElementById('date2').style.opacity = 1
+    document.getElementById('date1').textContent = event1.date.toLocaleDateString("en-US", options);
+    document.getElementById('date2').textContent = event2.date.toLocaleDateString("en-US", options);
     if (guess === correct) {
-        document.getElementById('event1').style.backgroundColor = '#3ac71e';
-        document.getElementById('event2').style.backgroundColor = '#3ac71e';
+        document.getElementById('event1container').style.backgroundColor = '#3ac71e';
+        document.getElementById('event2container').style.backgroundColor = '#3ac71e';
     } else {
-        document.getElementById('event1').style.backgroundColor = '#ed3a2d';
-        document.getElementById('event2').style.backgroundColor = '#ed3a2d';
+        document.getElementById('event1container').style.backgroundColor = '#ed3a2d';
+        document.getElementById('event2container').style.backgroundColor = '#ed3a2d';
     }
     setTimeout(displayEvents, 1000);
 }

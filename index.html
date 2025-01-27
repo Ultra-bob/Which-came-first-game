@@ -8,9 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="event" id="event1" onclick="checkGuess('Event 1')"></div>
+        <div class="event" id="event1container" onclick="checkGuess('Event 1')">
+            <p style="opacity: 0%;">spacer</p>
+            <p id="event1">Error</p>
+            <p class="date" id="date1">1922</p>
+        </div>
         <div class="center-circle">Which came first?</div>
-        <div class="event" id="event2" onclick="checkGuess('Event 2')"></div>
+        <div class="event" id="event2container" onclick="checkGuess('Event 2')">
+            <p style="opacity: 0%;">spacer</p>
+            <p id="event2">Error</p>
+            <p class="date" id="date2">1922</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
