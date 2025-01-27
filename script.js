@@ -28,7 +28,7 @@ const events = [
     { name: "Italian Campaign", date: new Date("1943-07-10") },
     { name: "Hiroshima", date: new Date("1945-08-06") },
     { name: "Nagasaki", date: new Date("1945-08-09") },
-    { name: "War comes to an end", date: new Date("1945-09-02") },
+    { name: "WW2 Ends", date: new Date("1945-09-02") },
     { name: "Sputnik", date: new Date("1957-10-04") },
     { name: "Soviet Union Technology Exposition", date: new Date("1958-01-01") }, // (1958-9)
     { name: "Cuban Missile Crisis", date: new Date("1962-10-16") },
