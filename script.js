@@ -1,5 +1,5 @@
 const events = [
-    { name: "Schlieffen Plan", date: new Date("1905-01-01") },
+    { name: "Schlieffen Plan Developed", date: new Date("1905-01-01") },
     { name: "Assassination of Archduke Franz Ferdinand", date: new Date("1914-06-28") },
     { name: "First Battle of the Ypres", date: new Date("1914-10-19") },
     { name: "Battle of the Somme", date: new Date("1916-07-01") },
@@ -14,7 +14,7 @@ const events = [
     { name: "Black Tuesday", date: new Date("1929-10-29") },
     { name: "Person's Case", date: new Date("1928-01-01") }, // (1928)
     { name: "First Relief Camp Established in Canada", date: new Date("1932-01-01") }, // (1932)
-    { name: "Appeasement", date: new Date("1930-01-01") }, // (1930s)
+    { name: "Munich Agreement", date: new Date("1938-09-30") }, // (1930s)
     { name: "Rise of New Political Parties", date: new Date("1930-01-01") }, // (1930s)
     { name: "Hitler becomes Chancellor", date: new Date("1933-01-01") },
     { name: "Nuremberg Laws", date: new Date("1935-01-01") },
@@ -26,8 +26,10 @@ const events = [
     { name: "Kristallnacht", date: new Date("1938-11-09") },
     { name: "Dieppe", date: new Date("1942-08-19") },
     { name: "Italian Campaign", date: new Date("1943-07-10") },
+    { name: "VE Day", date: new Date("1945-05-08") },
     { name: "Hiroshima", date: new Date("1945-08-06") },
     { name: "Nagasaki", date: new Date("1945-08-09") },
+    { name: "VJ Day", date: new Date("1945-08-15") },
     { name: "WW2 Ends", date: new Date("1945-09-02") },
     { name: "Sputnik", date: new Date("1957-10-04") },
     { name: "Soviet Union Technology Exposition", date: new Date("1958-01-01") }, // (1958-9)
