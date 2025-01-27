@@ -27,7 +27,7 @@ body {
     align-items: center;
     max-width: 100%;
     cursor: pointer;
-    font-size: 48px;
+    font-size: 3em;
     color: white;
     transition: background-color 0.3s;
 }
@@ -42,13 +42,13 @@ body {
 
 #event1container {
     background-color: #00bcd4;
-    padding-right: 70px;
+    padding-right: 1em;
     text-align: left;
 }
 
 #event2container {
     background-color: #f44336;
-    padding-left: 60px;
+    padding-left: 1em;
     text-align: right;
 }
 
@@ -79,5 +79,10 @@ body {
   @media (orientation: portrait) {
     .container {
       flex-direction: column;
+    }
+
+    .event {
+        text-align: center !important;
+        font-size: 2em;
     }
   }
