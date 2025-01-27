@@ -103,7 +103,7 @@ function checkGuess(guess) {
         document.getElementById('event1container').style.backgroundColor = '#ed3a2d';
         document.getElementById('event2container').style.backgroundColor = '#ed3a2d';
     }
-    setTimeout(displayEvents, 1000);
+    setTimeout(displayEvents, 2000);
 }
 
 displayEvents();
