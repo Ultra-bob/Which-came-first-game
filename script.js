@@ -3,6 +3,7 @@ const events = [
     { name: "Assassination of Archduke Franz Ferdinand", date: new Date("1914-06-28") },
     { name: "First Battle of the Ypres", date: new Date("1914-10-19") },
     { name: "Battle of the Somme", date: new Date("1916-07-01") },
+    { name: "Zimmerman Telegram", date: new Date("1917-01-17") },
     { name: "Passchendaele", date: new Date("1917-07-31") },
     { name: "Vimy Ridge", date: new Date("1917-04-09") },
     { name: "Third Battle of the Ypres", date: new Date("1917-07-31") },
@@ -15,12 +16,13 @@ const events = [
     { name: "Persons Case", date: new Date("1928-01-01") }, // (1928)
     { name: "First Relief Camp Established in Canada", date: new Date("1932-01-01") }, // (1932)
     { name: "Munich Agreement", date: new Date("1938-09-30") }, // (1930s)
-    { name: "Rise of New Political Parties", date: new Date("1930-01-01") }, // (1930s)
+    // { name: "Rise of New Political Parties", date: new Date("1930-01-01") }, // (1930s)
     { name: "Hitler becomes Chancellor", date: new Date("1933-01-01") },
     { name: "Nuremberg Laws", date: new Date("1935-01-01") },
     { name: "S.S. St. Louis", date: new Date("1939-05-13") },
     { name: "Hitler invades Poland", date: new Date("1939-09-01") },
     { name: "Mobile Killing Units", date: new Date("1939-01-01") }, // (1939-41)
+    { name: "Pearl Harbor", date: new Date("1941-12-07") }, // (1939-41)
     { name: "Liquidation of the Ghettos", date: new Date("1943-01-01") }, // (1943)
     { name: "Night of the Long Knives", date: new Date("1934-06-30") },
     { name: "Kristallnacht", date: new Date("1938-11-09") },
