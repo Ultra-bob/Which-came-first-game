@@ -12,7 +12,7 @@ const events = [
     { name: "Paris Peace Conference & Treaty of Versailles", date: new Date("1919-01-01") }, // (1919)
     { name: "Prohibition", date: new Date("1920-01-17") }, // (January 17, 1920-33)
     { name: "Black Tuesday", date: new Date("1929-10-29") },
-    { name: "Person's Case", date: new Date("1928-01-01") }, // (1928)
+    { name: "Persons Case", date: new Date("1928-01-01") }, // (1928)
     { name: "First Relief Camp Established in Canada", date: new Date("1932-01-01") }, // (1932)
     { name: "Munich Agreement", date: new Date("1938-09-30") }, // (1930s)
     { name: "Rise of New Political Parties", date: new Date("1930-01-01") }, // (1930s)
@@ -31,6 +31,7 @@ const events = [
     { name: "Nagasaki", date: new Date("1945-08-09") },
     { name: "VJ Day", date: new Date("1945-08-15") },
     { name: "WW2 Ends", date: new Date("1945-09-02") },
+    { name: "Suez Canal Crisis", date: new Date("1956-10-01") },
     { name: "Sputnik", date: new Date("1957-10-04") },
     { name: "Soviet Union Technology Exposition", date: new Date("1958-01-01") }, // (1958-9)
     { name: "Cuban Missile Crisis", date: new Date("1962-10-16") },
